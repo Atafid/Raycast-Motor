@@ -71,10 +71,12 @@ cmake ..
 cmake --build .
 ```
 
-6. **Build the Project:**
+6. **Copy dlls :**
 
 ```bash
-cmake --build .
+cp _deps/sfml-build/lib/sfml-window-d-2.dll Debug/
+cp _deps/sfml-build/lib/sfml-graphics-d-2.dll Debug/
+cp _deps/sfml-build/lib/sfml-system-d-2.dll Debug/
 ```
 
 7. **Run the Executable :**
@@ -97,12 +99,12 @@ cmake --build .
 ## Screenshots
 
 ### 3D Perspective View
-![3D View]<p align="center">
+<p align="center">
 	<img src="resources/img/3d.png" width="400">
 </p>
 
 ### 2D Top-Down Map
-![2D Map]<p align="center">
+<p align="center">
 	<img src="resources/img/2d.png" width="400">
 </p>
 
