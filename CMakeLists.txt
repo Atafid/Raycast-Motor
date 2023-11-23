@@ -38,11 +38,3 @@ add_executable(Raycast-Motor ${SOURCE_FILES} ${HEADER_FILES})
 
 # Liens avec les bibliothèques SFML
 target_link_libraries(Raycast-Motor PRIVATE sfml-graphics sfml-window sfml-audio sfml-network sfml-system)
-
-# Copier les DLLs de SFML vers le dossier de sortie lors de la construction
-add_custom_command(TARGET Raycast-Motor
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-    $<TARGET_FILE_DIR:sfml::sfml-graphics>
-    $<TARGET_FILE_DIR:Raycast-Motor>
-    COMMENT "Copying SFML DLLs to output directory"
-)
